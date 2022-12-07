@@ -15,7 +15,7 @@ inquirer
       name: 'description',
     },
     {
-      type: 'input',
+      type: 'confirm',
       message: 'do you want a table of contents?',
       name: 'table-of-contents',
     },
@@ -55,23 +55,23 @@ inquirer
         name: 'contribute',
       },
   ])
+  
   .then((response) => {
-    fs.appendFile('response.text',JSON.stringify(response), (error) =>
+    fs.writeFile('README.md',JSON.stringify(response), (error) =>
     !error ? console.log('success!')
     : console.log('an error occured'));
-    console.log(response.name);
-    console.log(response.languages);
-    console.log(response.preferred);
+    console.log(response);
+console.log(fs.args)
     })
   ;
 // TODO: Create an array of questions for user input
-const questions = [];
+// const questions = [];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
+// // TODO: Create a function to initialize app
+// function init() {}
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();

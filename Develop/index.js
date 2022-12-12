@@ -36,14 +36,14 @@ inquirer
         name: 'credits',
       },
       {
-        type: 'input',
+        type: 'checkbox',
         message: 'The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.',
         name: 'license',
       },
       {
         type: 'input',
         message: 'Badges arent necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what youre doing. ',
-        name: 'badges',
+        choices: ['badges',
       },
       {
         type: 'input',

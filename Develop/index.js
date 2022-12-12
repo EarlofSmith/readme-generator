@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const createMarkdown = require('./utils/generateMarkdown.js')
 
 inquirer
   .prompt([
@@ -42,12 +43,17 @@ inquirer
       {
         type: 'input',
         message: 'Badges arent necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what youre doing. ',
-        name: 'credits',
+        name: 'badges',
       },
       {
         type: 'input',
         message: 'If your project has a lot of features, list them here.',
         name: 'features',
+      },
+      {
+        type: 'input',
+        message: 'Do you want to add a contributor covenant?',
+        name: 'contribute',
       },
       {
         type: 'input',
@@ -69,6 +75,7 @@ console.log(fs.args)
 
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
+
 
 // // TODO: Create a function to initialize app
 // function init() {}

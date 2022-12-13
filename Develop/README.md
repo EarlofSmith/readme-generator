@@ -1,5 +1,5 @@
 
-  # please work
+  # readme generator
   ## Table of Contents
   * [Description](#description)
   * [Installation Instructions](#installation-instructions)
@@ -12,24 +12,26 @@
 
 
   ## Description
-  * does this shit work
+  * so i dont have to write this shit myself
 
   ## Installation Instructions
-  * click node
+  * just run node
 
   ## Usage
-  * add screen shot here
+  * download needed files
 
   ## Credits 
   * alone
 
   ## License
   * [![License: BSD](https://img.shields.io/badge/License-BSD%203%20Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-  * BSD 3
 
   ## Features
-  * so many features
+  * none
 
   ## Contribute
   * add whatever
+
+  ## Badges
+  * got here to create custom badges [shields.io](https://shields.io/)
 

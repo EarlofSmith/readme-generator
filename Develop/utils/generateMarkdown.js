@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//  this creates a license link and a badge all in one array for use
 const badges = {
   MIT: `[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)`,
   APACHE: `[![License: APACHE](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`,
@@ -11,7 +10,7 @@ const badges = {
 
   None: `No license has been chosen.`,
 }
-
+// this function returns the license choice from input and add correct one from array
 function renderLicenseBadge(license) {
   if (license == "MIT")
   return badges.MIT;
@@ -75,6 +74,9 @@ function generateMarkdown(data) {
 
   ## Contribute
   * ${data.contribute}
+
+  ## Badges
+  * got here to create custom badges [shields.io](https://shields.io/)
 
 `;
 }

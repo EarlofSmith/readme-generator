@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
-
+// add the questions to get inputs from inquirer though node
 inquirer
   .prompt([
     {
@@ -33,7 +33,7 @@ inquirer
       {
         type: 'checkbox',
         name: 'license',
-        message: 'The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.',
+        message: 'Add a License so other developers know what they can and cannot do with your project. Choose only one.',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'IBM PLV', 'ISC', 'MPL 2.0', 'None']
       },
       // {
@@ -52,7 +52,7 @@ inquirer
         name: 'contribute',
       },
   ])
-  
+  // takes respones and writes the to a readme markdown file
   .then((response) => {
     fs.writeFile('README.md',generateMarkdown(response), (error) =>
     !error ? console.log('success!')
@@ -60,12 +60,6 @@ inquirer
 
     })
   ;
-// TODO: Create an array of questions for user input
-// const questions = [];
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
 
 // // TODO: Create a function to initialize app
 // function init() {}

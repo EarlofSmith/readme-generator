@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const createMarkdown = require('./utils/generateMarkdown.js')
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 inquirer
   .prompt([
@@ -14,11 +14,6 @@ inquirer
       type: 'input',
       message: 'Write a short discrption of your project, What was your motivation?, Why did you build this project? What problem does it solve?',
       name: 'description',
-    },
-    {
-      type: 'confirm',
-      message: 'do you want a table of contents?',
-      name: 'table-of-contents',
     },
     {
         type: 'input',
@@ -37,14 +32,15 @@ inquirer
       },
       {
         type: 'checkbox',
-        message: 'The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.',
         name: 'license',
+        message: 'The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.',
+        choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'IBM PLV', 'ISC', 'MPL 2.0', 'None']
       },
-      {
-        type: 'input',
-        message: 'Badges arent necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what youre doing. ',
-        choices: ['badges',
-      },
+      // {
+      //   type: 'input',
+      //   message: 'Badges arent necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what youre doing. ',
+      //   choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'IBM PLV', 'ISC', 'MPL 2.0', 'None']
+      // },
       {
         type: 'input',
         message: 'If your project has a lot of features, list them here.',
@@ -52,22 +48,16 @@ inquirer
       },
       {
         type: 'input',
-        message: 'Do you want to add a contributor covenant?',
-        name: 'contribute',
-      },
-      {
-        type: 'input',
-        message: 'Do you want to add a contributor covenant?',
+        message: 'Add instructions for contributers.',
         name: 'contribute',
       },
   ])
   
   .then((response) => {
-    fs.writeFile('README.md',JSON.stringify(response), (error) =>
+    fs.writeFile('README.md',generateMarkdown(response), (error) =>
     !error ? console.log('success!')
     : console.log('an error occured'));
-    console.log(response);
-console.log(fs.args)
+
     })
   ;
 // TODO: Create an array of questions for user input

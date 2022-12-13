@@ -1,5 +1,5 @@
 
-  # adfa
+  # please work
   ## Table of Contents
   * [Description](#description)
   * [Installation Instructions](#installation-instructions)
@@ -12,24 +12,24 @@
 
 
   ## Description
-  * adf
+  * does this shit work
 
   ## Installation Instructions
-  * adf
+  * click node
 
   ## Usage
-  * adffg
+  * add screen shot here
 
   ## Credits 
-  * agag
+  * alone
 
   ## License
-  * undefined
-  * 
+  * [![License: BSD](https://img.shields.io/badge/License-BSD%203%20Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+  * BSD 3
 
   ## Features
-  * adfa
+  * so many features
 
   ## Contribute
-  * adf
+  * add whatever
 

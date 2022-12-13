@@ -7,6 +7,16 @@ inquirer
   .prompt([
     {
       type: 'input',
+      message: 'What is your name?',
+      name: 'name',
+    },
+    {
+      type: 'input',
+      message: 'What is the year?',
+      name: 'year',
+    },
+    {
+      type: 'input',
       message: 'What is the title of your project?',
       name: 'title',
     },
@@ -36,11 +46,6 @@ inquirer
         message: 'Add a License so other developers know what they can and cannot do with your project. Choose only one.',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'IBM PLV', 'ISC', 'MPL 2.0', 'None']
       },
-      // {
-      //   type: 'input',
-      //   message: 'Badges arent necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what youre doing. ',
-      //   choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'IBM PLV', 'ISC', 'MPL 2.0', 'None']
-      // },
       {
         type: 'input',
         message: 'If your project has a lot of features, list them here.',
@@ -50,6 +55,16 @@ inquirer
         type: 'input',
         message: 'Add instructions for contributers.',
         name: 'contribute',
+      },
+      {
+        type: 'input',
+        message: 'What is your GitHub user name?',
+        name: 'github',
+      },
+      {
+        type: 'input',
+        message: 'Enter an email for questions.',
+        name: 'questions',
       },
   ])
   // takes respones and writes the to a readme markdown file
